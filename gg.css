@@ -1,0 +1,192 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+header {
+  box-sizing: border-box;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 20%;
+  transform-style: inherit;
+  width: 100vw;
+  position: relative; /* добавлено для позиционирования ::before псевдоэлемента */
+}
+
+header::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+  transform-origin: center;
+  min-height: 100vh;
+  background-image: url(https://celes.club/uploads/posts/2022-05/1652861631_1-celes-club-p-fon-dlya-ks-go-v-stime-krasivie-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateZ(-1px) scale(2);
+}
+
+header h1 {
+  margin-top: -100px;
+  font-size: 3rem; /* добавлено для изменения размера шрифта */
+  color: white; /* добавлено для изменения цвета текста */
+  text-shadow: 1px 1px black; /* добавлено для добавления теней текста */
+}
+/* Добавление стилей для ссылок */
+a {
+  color: #0077cc;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #004466;
+}
+
+/* Добавление стилей для кнопок */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #004466;
+}
+
+/* Добавление стилей для списков */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Добавление стилей для изображений */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Добавление стилей для форм */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+textarea {
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+input[type="submit"] {
+  background-color: #0077cc;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #004466;
+}
+.my-text-box {
+  border: 2px solid #0077cc;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.contacts{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.my-contacts{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.contacts a{
+  text-align: center;
+  text-decoration: none;
+  font-size: 24px;
+  color: white;
+}
+
+.contact span{
+  opacity: 1;
+}
+
+.contacts .contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 40vw;
+  height: 40vh;
+  border: 1px solid white;
+  border-radius: 30px;
+  margin: 10px 0;
+  backdrop-filter: blur(10px);
+  transition: 0.8s;
+  
+}
+.contacts .contact1:hover{
+  background: url(../img/github.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 2em;
+  position: relative;
+  z-index: 1;
+}
+
+
